@@ -1,24 +1,26 @@
-// Required dependencies
-
-const express = require("express");
-const fs = require("fs");
+const fs = require('fs');
 const path = require('path');
 
-// Express app
+// Express
 
+const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-// Data parsing
+const htmlRoutes = require('./routes/htmlRoutes');
+const apiRoutes = require('./routes/apiRoutes');
+
+const PORT = process.env.PORT || 3001;
+
+// Middleware
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(__dirname));
+app.use(express.static('public'));
 
-// Required routes
+app.use('/', htmlRoutes);
+app.use('/api', apiRoutes);
 
-require('./routes/routes')(app);
 
-app.listen(PORT, function () {
-    console.log("App is listening", PORT);
-});
+app.listen(port, () => {
+    console.log(`Running on http://localhost:${PORT}`);
+})
