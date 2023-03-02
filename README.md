@@ -14,5 +14,5 @@ To-do
 
 ### Links:
 
-1. Deployed application:
+1. Deployed application: https://hidden-beach-83797.herokuapp.com/
 2. GitHub repository: https://github.com/XvrTeo/Note-Taker
