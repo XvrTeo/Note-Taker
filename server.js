@@ -17,6 +17,8 @@ app.use(express.static('public'));
 app.use('/', htmlRoutes);
 app.use('/api', apiRoutes);
 
-app.listen(port, () =>
-    console.log(`Running on http://localhost:${PORT}`)
+// Starting the server
+
+app.listen(PORT, () =>
+    console.log(`Server running on http://localhost:${PORT}`)
 );
