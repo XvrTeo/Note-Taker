@@ -1,0 +1,24 @@
+# Directories
+node_modules/
+dist/
+
+# Files
+.env
+.env.*
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+
+# OS files
+*.swp
+*.swo
+._*
+.DS_Store
+ehthumbs.db
+Icon?
+ehthumbs_vista.db
+Thumbs.db
+desktop.ini
